@@ -1,0 +1,178 @@
+{
+  "local": {
+    "dataType": [
+      {
+        "type": "bit",
+        "label": "位",
+        "register": [
+          {
+            "name": "R",
+            "rcode": 1,
+            "wcode": 5,
+            "addressStart": 0,
+            "totalLength": 2,
+            "split": 0,
+            "start": 4096
+          },
+          {
+            "name": "S",
+            "rcode": 2,
+            "wcode": 5,
+            "addressStart": 0,
+            "totalLength": 2,
+            "split": 0,
+            "start": 4352  
+          }
+        ]
+      },
+      {
+        "type": "bit16",
+        "label": "16位无符号",
+        "register": [
+          {
+            "name": "A",
+            "rcode": 4,
+            "wcode": 6,
+            "addressStart": 0,
+            "totalLength": 1,
+            "split": 0,
+            "start": 5120
+          }
+        ]
+      }
+    ]
+  },
+  "plc": [
+    {
+      "company": "DELTA",
+      "description": "台达公司",
+      "deviceType": [
+        {
+          "name": "DELTA DVP",
+          "protocal": "ASCII",
+          "communication": 
+            {
+              "communicationType": "RS232",
+              "baudRate": 9600, 
+              "dataBit": 7,
+              "stopBit": 1,
+              "checkBit": "偶校验",
+              "compatibleModels": "DVP14SS11R2，DVP 24，DVP 32，DVP 60ES00，DVP-XXES01"
+            },
+          "dataType": [
+            {
+              "type": "bit",
+              "label": "位",
+              "register": [
+                {
+                  "name": "S",
+                  "rcode": 1,
+                  "wcode": 5,
+                  "addressStart": 0,
+                  "totalLength": 1024,
+                  "split": 0,
+                  "start": 0
+                },
+                {
+                  "name": "M",
+                  "rcode": 1,
+                  "wcode": 5,
+                  "addressStart": 0,
+                  "totalLength": 4096,
+                  "split": 1,
+                  "address": [
+                    {
+                      "start": 2048,
+                      "end": 3583,
+                      "length": 1536
+                    },
+                    {
+                      "start": 45056,
+                      "end": 47615,
+                      "length": 2560
+                    }
+                  ]
+                },
+                {
+                  "name": "X",
+                  "rcode": 2,
+                  "wcode": 5,
+                  "addressStart": 0,
+                  "totalLength": 256,
+                  "split": 0,
+                  "start": 1024
+                },
+                {
+                  "name": "Y",
+                  "rcode": 1,
+                  "wcode": 5,
+                  "addressStart": 0,
+                  "totalLength": 256,
+                  "split": 0,
+                  "start": 1280
+                },
+                {
+                  "name": "T",
+                  "rcode": 1,
+                  "wcode": 5,
+                  "addressStart": 0,
+                  "totalLength": 256,
+                  "split": 0,
+                  "start": 1536
+                }
+              ]
+            },
+            {
+              "type": "bit16",
+              "label": "16位无符号",
+              "register": [
+                {
+                  "name": "D",
+                  "rcode": 3,
+                  "wcode": 6,
+                  "addressStart": 0,
+                  "totalLength": 10000,
+                  "split": 0,
+                  "start": 4096
+                },
+                {
+                  "name": "T",
+                  "rcode": 3,
+                  "wcode": 6,
+                  "addressStart": 0,
+                  "totalLength": 256,
+                  "split": 0,
+                  "start": 1536
+                },
+                {
+                  "name": "C",
+                  "rcode": 3,
+                  "wcode": 6,
+                  "addressStart": 0,
+                  "totalLength": 200,
+                  "split": 0,
+                  "start": 3584
+                }
+              ]
+            },
+            {
+              "type": "bit32",
+              "label": "32位无符号",
+              "register": [
+                {
+                  "name": "C",
+                  "rcode": 3,
+                  "wcode": 6,
+                  "addressStart": 200,
+                  "totalLength": 56,
+                  "split": 0,
+                  "start": 3784
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
